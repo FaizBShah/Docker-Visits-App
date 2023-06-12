@@ -1,0 +1,10 @@
+version: '3'
+services:
+  redis-server:
+    image: 'redis'
+
+  node-app:
+    build: . # Mentioning the path which contains the Dockerfile
+    ports:
+      - "8080:8080"
+    restart: always # Always restart if container crashes
